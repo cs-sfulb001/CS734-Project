@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --primary-color: rgb(0, 16, 104);
+    --muted-primary-color: rgba(0, 16, 104, 0.5);
+    --secondary-color: rgb(2, 52, 94);
+    --tertiary-color: rgb(14, 14, 14);
+    --white: rgb(173, 173, 173);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--tertiary-color);
+}

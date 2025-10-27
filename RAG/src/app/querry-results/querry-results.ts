@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { result } from '../result';
+import { results } from '../result-list';
+import { ResultDisplay } from '../result-display/result-display';
 
 @Component({
   selector: 'app-querry-results',
-  imports: [],
+  imports: [ResultDisplay],
   templateUrl: './querry-results.html',
   styleUrl: './querry-results.css',
 })
 export class QuerryResults {
-  search(querry: string) {
-    }
+  resultList: result[] = [];
+  resultService: results = inject(results);
+  constructor() {
+    this.resultList = this.resultService.getAllResults();
+  }
 }

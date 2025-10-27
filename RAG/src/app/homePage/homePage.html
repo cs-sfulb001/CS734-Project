@@ -1,9 +1,10 @@
 <section class="content">
     <section class ="HomeScreen">
-        <img class="logo" src="../../assets/logo.svg" alt="logo" aria-hidden="true" />
+        <img class="logo" src="../../assets/Logo.png" alt="logo" aria-hidden="true" />
         <form class = "Search">
-        <input class="SearchBox" type="text" placeholder="What would you like to know?" #querry />
-        <button class="SearchButton" type="button" (click)="search(querry.value)">Search</button>
+            <input class="SearchBox" type="text" placeholder="Standard Search using Pyserini" #querry />
+            <button class="SearchButton" type="button" (click)="search(querry.value)">Search</button>
         </form>
+        <button class="RAGButton" type="button" (click)="toRAG()">Use RAG Instead</button>
     </section>
 </section>

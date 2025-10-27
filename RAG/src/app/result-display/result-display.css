@@ -1,0 +1,12 @@
+.listing-heading{
+    color:white;
+    transform: translateX(2%);
+}
+.listing-location{
+    color:white;
+    margin:1%;
+}
+.listing{
+    border-bottom: 10px solid var(--muted-primary-color);
+    min-height: 10%;
+}

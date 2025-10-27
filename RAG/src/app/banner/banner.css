@@ -1,29 +1,51 @@
-:host{
-    --primary-color: rgb(19, 2, 117);
-    --secondary-color: rgb(224, 210, 7);
-}
-.main{
-  background-color: red;
-  height: 98dvh;
-}
 .content{
-  background-color: var(--secondary-color);
-  height: 95%;
+  background-color: var(--tertiary-color);
+  height: 90%;
 }
 .banner {
-  background-color: rgb(58, 58, 58);
-  display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 50px));
-  margin-top: 10px;
-  justify-content: space-around;
+  height: 7%;
+  border-bottom: 5px outset var(--secondary-color);
+  background-color: var(--primary-color);
+  display: flex;
 }
 .logo {
   display: grid;
   column-gap: 14px;
-  width: 50px;
-  height: 50px;
+  height: 100%;
   border-radius: 10px;
   justify-content: space-around;
+}
+.Search{
+    display:flex;
+    gap: 0;
+    align-self:center;
+    width: 90%;
+    place-items: center;
+    height: 30%;
+    justify-content:center;
+}
+.SearchBox{
+    border-radius: 10px;
+    height: 60%;
+    width: 50%;
+    border-color: var(--secondary-color);
+    outline-color: var(--secondary-color);
+    margin: 0 auto;
+    padding:0;
+}
+.SearchButton{
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 10px;
+    width: 10%;
+    transform: translateX(-100%);
+}
+.RAGButton{
+    background-color: var(--secondary-color);
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    justify-self: center;
+    transform: translateX(-50%);
 }

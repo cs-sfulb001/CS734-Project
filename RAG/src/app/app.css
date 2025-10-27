@@ -1,9 +1,5 @@
-:host{
-    --primary-color: rgb(19, 2, 117);
-    --secondary-color: rgb(224, 210, 7);
-}
 .main{
-  background-color: red;
-  height: 96dvh;
-  width: 99dvw;
+  height: 100dvh;
+  width: 100dvw;
+  display:block;
 }

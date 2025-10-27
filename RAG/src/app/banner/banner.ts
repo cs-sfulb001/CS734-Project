@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {RouterLink, RouterOutlet, Router} from '@angular/router';
 
 @Component({
   selector: 'app-banner',
@@ -8,5 +8,13 @@ import {RouterLink, RouterOutlet} from '@angular/router';
   styleUrl: './banner.css',
 })
 export class Banner {
-
+  constructor(private router: Router){}
+  search(querry: string) {
+    if(querry != ''){
+      this.router.navigateByUrl('banner/querry/'+querry);
+    }
+  }
+  toRAG(){
+    this.router.navigateByUrl('banner/rag');
+  }
 }

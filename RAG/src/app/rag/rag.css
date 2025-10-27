@@ -1,0 +1,49 @@
+.Display{
+    background-color: var(--white);
+    height: 84%;
+    width: 95%;
+    place-self: center;
+    border-width: 5px;
+    border-color: var(--secondary-color);
+    border-style: solid;
+}
+.QuerryBox{
+    background-color: var(--primary-color);
+    border-width: 5px;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    width: 95%;
+    height: 10%;
+    place-self: center;
+    display: flex;
+    border-radius: 0 0 20px 20px;
+}
+.TextBox{
+    background-color: var(--white);
+    border-width: 2px;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    width:78%;
+    height: 70%;
+    align-self: center;
+    justify-self: flex-start;
+    margin:  1%;
+    padding: -1%;
+    font-size: 150%;
+    word-break: break-all;
+    resize: none;
+    border-radius: 0 0 0 10px;
+}
+.SubmitRAGQuerry{
+    color: white;
+    border-width: 5px;
+    border-color: var(--secondary-color);
+    border-style: outset;
+    background-color: var(--secondary-color);
+    width:20%;
+    height: 76%;
+    align-self: center;
+    margin:  1%;
+    padding: -1%;
+    border-radius: 0 0 10px 0;
+}

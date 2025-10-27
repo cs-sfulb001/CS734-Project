@@ -1,8 +1,14 @@
-<a [routerLink]="['/']">
+
 <header class="banner">
-    <img class="logo" src="../../assets/logo.svg" alt="logo" aria-hidden="true" />
+    <a [routerLink]="['/']">
+        <img class="logo" src="../../assets/Logo.png" alt="logo" aria-hidden="true" />
+    </a>
+    <section class = "Search">
+        <input class="SearchBox" type="text" placeholder="Standard Search using Pyserini" #querry />
+        <button class="SearchButton" type="button" (click)="search(querry.value)">Search</button>
+        <button class="RAGButton" type="button" (click)="toRAG()">Use RAG Instead</button>
+    </section>
 </header>
-</a>
 <section class="content">
     <router-outlet></router-outlet>
 </section>

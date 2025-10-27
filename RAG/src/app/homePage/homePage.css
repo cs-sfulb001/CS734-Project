@@ -1,14 +1,13 @@
-:host{
-    --primary-color: rgb(37, 2, 117);
-    --secondary-color: rgb(255, 238, 0);
-}
 .HomeScreen{
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
     display: grid;
-    margin-top: 10px;
     border-radius: 20px;
-    height: calc(100% - 20px);
-    margin: 10px;
+    height: 97dvh;
+    width: 98.2dvw;
+    border-color: var(--secondary-color);
+    border-width: 10px;
+    border-style: solid;
+    
 }
 .Search{
     align-self:center;
@@ -24,27 +23,35 @@
     border-color: var(--secondary-color);
     outline-color: var(--secondary-color);
     position: relative;
+    border-width: 4px;
 }
 .SearchButton{
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: white;
     border-color: var(--secondary-color);
     border-radius: 0 10px 10px 0;
     height: 3.7%;
     width: 10%;
+    border-width: 3px;
     position: relative;
 }
 .content{
-  background-color: var(--secondary-color);
-  height: 100%;
   place-content: center;
-  border-radius: 30px;
 }
 .logo {
-  width: 150px;
   height: 150px;
   border-radius: 10px;
-  transform: translateY(100%);
+  transform: translateY(200%);
   justify-self: center;
 
+}
+.RAGButton{
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--secondary-color);
+    border-width: 3px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    justify-self: center;
 }

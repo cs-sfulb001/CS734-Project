@@ -1,0 +1,10 @@
+<section class="Display">
+    @for(message of messageList; track $index) {
+        <app-ragmessage-display [Entry]="message"></app-ragmessage-display>
+        }
+</section>
+<section class="QuerryBox">
+    <textarea class="TextBox" type="text" placeholder="What would you like to know?" #querry ></textarea>
+    <button class="SubmitRAGQuerry" type="button" (click)="Querry(querry.value)">Submit RAG Querry</button>
+
+</section>
