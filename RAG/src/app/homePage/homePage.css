@@ -1,0 +1,50 @@
+:host{
+    --primary-color: rgb(37, 2, 117);
+    --secondary-color: rgb(255, 238, 0);
+}
+.HomeScreen{
+    background-color: var(--primary-color);
+    display: grid;
+    margin-top: 10px;
+    border-radius: 20px;
+    height: calc(100% - 20px);
+    margin: 10px;
+}
+.Search{
+    align-self:center;
+    position: absolute;
+    right: -18%;
+    width: 100%;
+    place-items: center;
+}
+.SearchBox{
+    border-radius: 10px 0 0 10px;
+    height: 3%;
+    width: 50%;
+    border-color: var(--secondary-color);
+    outline-color: var(--secondary-color);
+    position: relative;
+}
+.SearchButton{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 0 10px 10px 0;
+    height: 3.7%;
+    width: 10%;
+    position: relative;
+}
+.content{
+  background-color: var(--secondary-color);
+  height: 100%;
+  place-content: center;
+  border-radius: 30px;
+}
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  transform: translateY(100%);
+  justify-self: center;
+
+}
