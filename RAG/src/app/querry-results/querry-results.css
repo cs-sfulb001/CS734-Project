@@ -1,3 +1,33 @@
-.text{
-    text-align: center;
+.Search{
+    display:flex;
+    gap: 0;
+    align-self:center;
+    width: 100%;
+    place-items: center;
+    background-color: aquamarine;
+    height: 5%;
+    justify-content:center;
+}
+.SearchBox{
+    border-radius: 10px 0 0 10px;
+    height: 60%;
+    width: 50%;
+    border-color: var(--secondary-color);
+    outline-color: var(--secondary-color);
+    margin: 0 auto;
+    padding:0;
+}
+.SearchButton{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 0 10px 10px 0;
+    height: 72%;
+    width: 10%;
+    margin: 0 auto;
+    padding:0;
+}
+.Results{
+    display: block;
+    margin-bottom: 10px;
 }

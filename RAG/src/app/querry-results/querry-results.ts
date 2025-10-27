@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './querry-results.css',
 })
 export class QuerryResults {
-
+  search(querry: string) {
+    }
 }
