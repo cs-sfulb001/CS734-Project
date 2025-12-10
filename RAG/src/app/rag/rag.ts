@@ -1,7 +1,9 @@
 import { Component, inject, ViewChild, ElementRef } from '@angular/core';
+import { result } from '../result';
 import { RAGMessage } from '../ragmessage';
 import { RAGMessageDisplay } from '../ragmessage-display/ragmessage-display';
 import { RAGMessageList } from '../ragmessage-list';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-rag',
@@ -10,21 +12,36 @@ import { RAGMessageList } from '../ragmessage-list';
   styleUrl: './rag.css',
 })
 export class RAG {
-  @ViewChild('querry', { static: false }) querryRef!: ElementRef;
+  @ViewChild('query', { static: false }) queryRef!: ElementRef;
   messageList: RAGMessage[] = [];
   RAGMessageService: RAGMessageList = inject(RAGMessageList);
-  constructor() {
+  constructor(private http: HttpClient) {
     this.messageList = this.RAGMessageService.getAllMessages();
   }
-  Querry(querry: string) {
-    if(querry!=''){
+  Query(query: string) {
+    if(query!=''){
       const newMessage: RAGMessage = {
         id: 0,
         author: "User",
-        message: querry,
+        message: query,
       };
       this.messageList.push(newMessage)
-      this.querryRef.nativeElement.value = '';
+      this.queryRef.nativeElement.value = '';
+      this.http.post<result>('http://70.160.179.169:4201/RAG', {"Query":query}).subscribe(
+        (response)=>{
+          console.log('Success: ', response);
+          var Response : result = response;
+          const newAIMessage ={
+            id:0,
+            author: "RAG Powered by Gemini",
+            message: Response['result']
+          }
+          this.messageList.push(newAIMessage)
+        },
+        (error)=>{
+          console.error('Error: ', error);
+        }
+      );
     }
   }
 

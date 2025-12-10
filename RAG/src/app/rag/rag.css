@@ -34,7 +34,7 @@
     resize: none;
     border-radius: 0 0 0 10px;
 }
-.SubmitRAGQuerry{
+.SubmitRAGQuery{
     color: white;
     border-width: 5px;
     border-color: var(--secondary-color);
